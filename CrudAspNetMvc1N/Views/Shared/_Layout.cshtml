@@ -24,6 +24,8 @@
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Consultores", "Index", "Consultores")</li>
+                    <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
                 </ul>
             </div>
         </div>
@@ -32,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - Aplicação com Entity Framework</p>
         </footer>
     </div>
 
