@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Consultor.cs" />
+    <Compile Include="Models\LojaContext.cs" />
     <Compile Include="Models\Telefone.cs" />
     <Compile Include="Models\TipoTelefone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
