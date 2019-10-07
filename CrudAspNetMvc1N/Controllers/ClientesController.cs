@@ -46,7 +46,7 @@ namespace CrudAspNetMvc1N.Controllers
         // POST: Clientes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,Email,IdConsultor")] Cliente cliente)
+        public ActionResult Create([Bind(Include = "Id,Nome,Email,IdConsultor,Telefones")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace CrudAspNetMvc1N.Controllers
         // POST: Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Email,IdConsultor,Telefones")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "Id,Nome,Email,IdConsultor")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
