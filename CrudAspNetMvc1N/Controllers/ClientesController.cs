@@ -78,10 +78,17 @@ namespace CrudAspNetMvc1N.Controllers
         // POST: Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Email,IdConsultor")] Cliente cliente)
+        public ActionResult Edit([Bind(Include = "Id,Nome,Email,IdConsultor,Telefones")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
+                foreach (var telefone in cliente.Telefones)
+                {
+                    if (telefone.Id > 0)
+                        db.Entry(telefone).State = EntityState.Modified;
+                    else
+                        db.Entry(telefone).State = EntityState.Added;
+                }
                 db.Entry(cliente).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
