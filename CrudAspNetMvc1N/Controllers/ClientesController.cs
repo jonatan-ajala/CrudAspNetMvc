@@ -116,6 +116,14 @@ namespace CrudAspNetMvc1N.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public void RemoverTelefone(int id)
+        {
+            var telefone = db.Telefones.Find(id);
+            db.Entry(telefone).State = EntityState.Deleted;
+            db.SaveChanges();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

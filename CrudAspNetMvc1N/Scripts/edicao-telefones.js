@@ -27,7 +27,7 @@
             '      </div > ' +
             '              </div > ' +
             '  </div >' +
-            '   <p>';
+            '   <p></p>';
 
         $("#div-telefones").append(blocoTelefone);
         qtdTelefones++;
@@ -37,6 +37,10 @@
 
     $("#div-telefones").on("click", ".btn-remover-telefone", function (e) {
         e.preventDefault();
+
+        var id = $(this).attr("data-id");
+        if(id)
+        $.post("/Clientes/RemoverTelefone?id=" + id);
 
         $(this).parent().parent().remove();
 
