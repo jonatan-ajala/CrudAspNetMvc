@@ -45,31 +45,7 @@
             <div class="col-md-2">
                 <button class="btn btn-primary form-control"id="btn-add-telefone">Novo telefone </button>
             </div>
-            <div class="col-md-8" id="div-telefones">
-
-                <div class="row">
-                    <div class="col-md-10">
-                        <div class="col-md-3">
-                            <input type="number" name="Telefones[0].DDD" class="form-control" />
-                        </div>
-                        <div class="col-md-4">
-                            <input type="text" name="Telefones[0].Number" class="form-control" />
-                        </div>
-                        <div class="col-md-4">
-                            <select name="Telefones" [0].Tipo class="form-control">
-                                <option value="0">Residencial</option>
-                                <option value="1">Comercial</option>
-                                <option value="2">Celular</option>
-                                <option value="3">Recado</option>
-                            </select>
-                        </div>
-                        <div class="col-md-1">
-                            <button class="btn btn-danger btn-remove-telefone">
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </button>
-                        </div>  
-                    </div>
-                </div>
+            <div class="col-md-8" id="div-telefones">              
             </div>
         </div>
     </div>
@@ -88,4 +64,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script src="~/Scripts/criacao-telefones.js"></script>
 }
