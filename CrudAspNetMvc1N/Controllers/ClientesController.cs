@@ -118,6 +118,7 @@ namespace CrudAspNetMvc1N.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Cliente cliente = db.Clientes.Find(id);
+            db.Telefones.RemoveRange(cliente.Telefones);
             db.Clientes.Remove(cliente);
             db.SaveChanges();
             return RedirectToAction("Index");
