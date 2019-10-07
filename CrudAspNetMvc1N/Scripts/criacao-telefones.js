@@ -11,7 +11,7 @@
          '                 <input type="number" name="Telefones['+ qtdTelefones+'].DDD" class="form-control" placeholder="DDD" />'+
          '          </div>'+
          '          <div class="col-md-4">'+
-            '                 <input type="text" name="Telefones[' + qtdTelefones +'].Number" class="form-control" placeholder="Número"/>'+
+         '                 <input type="text" name="Telefones[' + qtdTelefones +'].Number" class="form-control" placeholder="Número"/>'+
          '          </div>'+
          '          <div class="col-md-4">'+
          '             <select name="Telefones" [' + qtdTelefones +'].Tipo class="form-control">'+
@@ -22,7 +22,7 @@
          '              </select>'+
          '           </div >'+
          '      <div class="col-md-1">'+
-         '          <button class="btn btn-danger btn-remove-telefone">'+
+         '          <button class="btn btn-danger btn-remover-telefone">'+
          '              <span class="glyphicon glyphicon-trash"></span>'+
          '          </button>'+
          '      </div > '+
@@ -36,10 +36,13 @@
         console.log(blocoTelefone);
     });
 
-   
-
-
-    $("btn-remove-telefone").click(function (e) {
+    $("#div-telefones").on("click", ".btn-remover-telefone", function (e) {
         e.preventDefault();
+
+        $(this).parent().parent().remove();
+
+        qtdTelefones--;
     });
+
+
 });
